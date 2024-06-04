@@ -5,6 +5,9 @@ import './App.css';
 function App() {
   const [count, setCount] = useState(0);
 
+  // @ts-ignore
+  window.electron.getStaticData();
+
   return (
     <div className="App">
       <div>
