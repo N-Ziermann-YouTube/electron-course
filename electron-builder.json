@@ -1,7 +1,7 @@
 {
   "appId": "com.n-ziermann.electron-course",
   "files": ["dist-electron", "dist-react"],
-  "extraResources": ["dist-electron/preload.cjs"],
+  "extraResources": ["dist-electron/preload.cjs", "src/assets/**"],
   "mac": {
     "target": "dmg"
   },
