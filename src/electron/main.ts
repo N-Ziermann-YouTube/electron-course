@@ -3,6 +3,7 @@ import path from 'path';
 import { ipcMainHandle, isDev } from './util.js';
 import { getStaticData, pollResources } from './resourceManager.js';
 import { getAssetPath, getPreloadPath, getUIPath } from './pathResolver.js';
+import { createTray } from './tray.js';
 
 app.on('ready', () => {
   const mainWindow = new BrowserWindow({
@@ -22,13 +23,7 @@ app.on('ready', () => {
     return getStaticData();
   });
 
-  new Tray(
-    path.join(
-      getAssetPath(),
-      process.platform === 'darwin' ? 'trayIconTemplate.png' : 'trayIcon.png'
-    )
-  );
-
+  createTray(mainWindow);
   handleCloseEvents(mainWindow);
 });
 
