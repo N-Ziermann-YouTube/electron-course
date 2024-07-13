@@ -37,6 +37,11 @@ function App() {
 
   return (
     <div className="App">
+      <header>
+        <button id="close" />
+        <button id="minimize" />
+        <button id="maximize" />
+      </header>
       <div style={{ height: 120 }}>
         <Chart data={activeUsages} maxDataPoints={10} />
       </div>
