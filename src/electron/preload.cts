@@ -5,6 +5,10 @@ electron.contextBridge.exposeInMainWorld('electron', {
     ipcOn('statistics', (stats) => {
       callback(stats);
     }),
+  subscribeChangeView: (callback) =>
+    ipcOn('changeView', (view) => {
+      callback(view);
+    }),
   getStaticData: () => ipcInvoke('getStaticData'),
 } satisfies Window['electron']);
 
