@@ -1,49 +1,4 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
 header {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   text-align: left;
   padding: 0.5rem;
@@ -71,4 +26,57 @@ header button {
 
 #maximize {
   background-color: lime;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 16rem auto;
+  gap: 1rem;
+  align-items: center;
+  margin: 1rem;
+  max-width: 900px;
+  margin: auto;
+  margin-top: 4rem;
+}
+
+.mainGrid {
+  height: 10rem;
+  padding: 0.5rem;
+}
+
+.selectOption {
+  display: block;
+  padding: 0.5rem;
+  width: 100%;
+  background-color: #2c2c2c;
+  margin: 0.5rem 0;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.selectOption:hover {
+  background-color: #333;
+}
+
+.selectOptionTitle {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.selectOptionTitle :first-child {
+  font-weight: 600;
+}
+
+.selectOptionTitle :nth-child(2) {
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+
+.selectOptionChart {
+  height: 2rem;
+  width: 100%;
+}
+
+.selectOptionChart * {
+  cursor: pointer;
 }
