@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "npm-run-all --parallel dev:react dev:electron",
     "dev:react": "vite",
-    "dev:electron": "npm run transpile:electron; cross-env NODE_ENV=development electron .",
+    "dev:electron": "npm run transpile:electron && cross-env NODE_ENV=development electron .",
     "build": "tsc && vite build",
     "preview": "vite preview",
     "transpile:electron": "tsc --project src/electron/tsconfig.json",
