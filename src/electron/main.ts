@@ -11,7 +11,7 @@ app.on('ready', () => {
       preload: getPreloadPath(),
     },
     // disables default system frame (dont do this if you want a proper working menu bar)
-    frame: false,
+    frame: true,
   });
   if (isDev()) {
     mainWindow.loadURL('http://localhost:5123');

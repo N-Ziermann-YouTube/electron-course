@@ -11,7 +11,9 @@ export function ipcMainHandle<Key extends keyof EventPayloadMapping>(
   handler: () => EventPayloadMapping[Key]
 ) {
   ipcMain.handle(key, (event) => {
-    validateEventFrame(event.senderFrame);
+    if (event.senderFrame) {
+      validateEventFrame(event.senderFrame);
+    }
     return handler();
   });
 }
@@ -21,7 +23,9 @@ export function ipcMainOn<Key extends keyof EventPayloadMapping>(
   handler: (payload: EventPayloadMapping[Key]) => void
 ) {
   ipcMain.on(key, (event, payload) => {
-    validateEventFrame(event.senderFrame);
+    if (event.senderFrame){
+      validateEventFrame(event.senderFrame);
+    }
     return handler(payload);
   });
 }
